@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Conversor Inteligente</h1>
+    </header>
+
+    <main class="container">
+        <!-- input de valor -->
+        <div class="input-group">
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor" placeholder="Digite o valor..." step="any">
+        </div>
+
+        <!-- input de tipo de conversão por switch -->
+        <div class="input-group">
+            <label for="conversao">Tipo de Conversão:</label>
+            <select id="conversao">
+                <option value="">Selecione...</option>
+                <option value="c-f">Celsius para Fahrenheit</option>
+                <option value="f-c">Fahrenheit para Celsius</option>
+                <option value="m-cm">Metros para Centímetros</option>
+                <option value="cm-m">Centímetros para Metros</option>
+                <option value="kg-g">Quilogramas para Gramas</option>
+                <option value="g-kg">Gramas para Quilogramas</option>
+                <option value="h-m">Horas para Minutos</option>
+                <option value="m-h">Minutos para Horas</option>
+            </select>
+        </div>
+
+        <!-- botoes de converter e limpar -->
+        <div class="buttons">
+            <button id="btnConverter">Converter</button>
+            <button id="btnLimpar">Limpar</button>
+        </div>
+
+        <!-- em caso de erro na validação, a mensagem de erro correspodnente aparecerá aqui -->
+        <div id="erro" class="error-message"></div>
+
+        <!-- resultado da conversão aparecerá aqui  -->
+        <div id="resultado-container" class="hidden">
+            <div id="resultadoText"></div>
+            <small id="formulaText"></small>
+        </div>
+
+        <!-- historico de conversões baseado em lista -->
+        <div class="historico">
+            <h3>Histórico</h3>
+            <ul id="listaHistorico"></ul>
+        </div>
+    </main>
+
+    <footer>
+            <p>desenvolvido por:</p>
+            <strong>Luiz Eduardo, João Lucas e Cassio Mendonça </strong>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
